@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablica</title>
+</head>
+<body>
+    <script>
+        let l1 = 10;
+        let l2 = 20;
+        let l3 = 30;
+
+        let liczby = [10, 20, 30];
+        // wyswietlanie liczby z tablicy czyli gdy napiszemy liczby[0] to wyswietli nam sie l1 = 10 w tablicach liczymy od 0
+        console.log('z tablicy' + liczby[2])
+        console.log(liczby);
+        // uzywanie tablicy
+         let liczbylosowe = []
+            // //zamiast pisac
+            // let liczbylosowe[0] = 12
+            // itd.
+            // mozemy uzyc petli
+        for(let i = 0; i <100; i++)
+        {
+            liczbylosowe[i] = Math.round(Math.random() *100);
+        }
+        //wyswitlamy zawartosc tablicy 
+        document.write('wyswietlanie zawratosci tablicy przy uzyciu petli <br>');
+        for(let i =0; i < liczbylosowe.length; i++)
+        {
+            document.write(liczbylosowe[i] + ' ');
+        }
+        document.write('<br><br>')
+        document.write('wyswietlanie zawartosci tablicy przy uzyciu metody join: <br>')
+        document.write(liczbylosowe.join(', '));
+        // obliczamy sume liczba tablicy
+        
+        let suma = 0;
+        liczbylosowe.forEach((liczba) => 
+        {
+            suma = suma + liczba;
+        });
+        document.write('suma liczb tablicy wynosi: ' + suma);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

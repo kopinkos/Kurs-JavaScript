@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekty i klasy </title>
+</head>
+<body>
+    <script>
+        //obiekt
+        let Obiekt =
+        {
+            //def. obiekty
+           marka: 'ford',
+           model: 'mustang',
+           kolor: 'niebieski',
+        };
+         console.log(Obiekt);
+         document.write('moj samochod ma kolor:' + Obiekt.kolor);
+         Obiekt.kolor = 'zloty';
+         document.write('<br>');
+         document.write('moj samochod ma teraz klor:' + Obiekt.kolor);
+        //klasy
+        class Samochod
+        {
+            constructor(marka, model, kolor)
+            {
+                this.marka = marka;
+                this.model = model;
+                this.kolor = kolor;
+            }
+            iloscKol = 4;
+
+            ziemnKolor(nowykolor)
+            {
+                this.kolor = nowykolor;
+            }
+        }
+        //tworzymy obiekt  na podstawie klasy samnochod
+        let kijanka = new Samochod('KIA', 'Ceed', 'zolty' );
+        console.log(kijanka);
+        let fiacik = new Samochod('fiat', 'punto', 'zielony');
+        console.log('kolor fiata:' + fiacik.kolor);
+
+        console.log(kijanka.iloscKol);
+        console.log('kolor przed zmiana:' + kijanka.kolor);
+        kijanka.ziemnKolor('pomaranczowy');
+        console.log('kolor po zmianie:' + kijanka.kolor);
+
+
+
+    </script>
+</body>
+</html>

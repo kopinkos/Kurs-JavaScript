@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularz</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="number" name="liczba1"/>
+            <input type="number" name="liczba2"/>
+        </div>
+        <div>
+            <label>Wybierz dzialanie do wykonania: </label>
+            <div>
+                <butto type="button" class="dodawanie">+</butto>
+                <butto class="odejmowanie">-</butto>
+                <butto class="mnozenie">*</butto>
+                <butto class="dzielenie">/</butto>
+            </div>
+        </div>
+    </form>
+    <div>wyniki dzialania:</div>
+    <input type="text" name="wynik"/>
+
+    <script>
+        let btnDodaj = document.querySelector('button.dodawanie');
+        let btnOdejmij = document.querySelector('button.odejmowanie');
+        let btnMnoz = document.querySelector('button.mnozenie');
+        let btnDziel = document.querySelector('button.dzielenie');
+
+
+        let poleLiczba1 = document.querySelector('input[name="liczba1"]');
+        let poleLiczba2 = document.querySelector('input[name="liczba2"]');
+        let poleWynik = document.querySelector('input[name="wynik"]');
+
+        let suma = function()
+        {
+            poleWynik.value =  parseInt(poleLiczba1.value) + poleLiczba2.value * 1; //parseInt jest to jawne konwertowanie  a mnozenie jest nie jawnym 
+        };
+        let roznica = function(e)
+        {
+            e.prevent.Default(); // zatrzymuje odswiezanie strony internetowej by po kliknieciu w przycisk str. sie nie odswiezala 
+            poleWynik.value =  poleLiczba1.value - poleLiczba2.value;
+        };
+        let iloczyn = function()
+        {
+            poleWynik.value =  poleLiczba1.value * poleLiczba2.value;
+        };
+        let iloraz = function()
+        {
+            poleWynik.value =  poleLiczba1.value / poleLiczba2.value;
+        };
+
+        btnDodaj.addEventListener('click', suma);
+        btnOdejmij.addEventListener('click', roznica);
+        btnMnoz.addEventListener('click', iloczyn);
+        btnDziel.addEventListener('click', iloraz);
+
+
+
+    </script>
+</body>
+</html>

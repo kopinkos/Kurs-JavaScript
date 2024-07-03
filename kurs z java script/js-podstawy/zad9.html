@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zdarzenia</title>
+    <style>
+        .tlo
+        {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button>kliknij mnie</button> -->
+    <div class="x">Wspolrzedna X kursora myszy: 0</div>
+    <div class="y">Wspolrzedna Y kursora myszy: 0</div>
+    <div class="klawisz">Nacisnieto klawisz: a</div>
+
+
+    <script>
+        let divX = document.querySelector('div.x');
+        let divY = document.querySelector('div.y');
+        let divKlawisz =document.querySelector('div.klawisz');
+
+        //tutaj bedzie kod, ktory w divach x i y bedzie podawal aktulane wspolrzedne kursora
+        document.addEventListener('mousemove', (e) =>
+        {
+            divX.textContent = 'wspolrzedna X kursora myszy:' + e.clientX;
+            divY.textContent = 'wspolrzedna Y kursora myszy:' + e.clientY;
+        });
+
+        //natomiast tutaj bedzie kod, ktory  w divie 'klawisz' umiesci wciskane klawisze
+        document.addEventListener('keydown', (e) =>
+        {
+            //divKlawisz.textContent = 'nacisnieto klawisz:' +e.key;
+            divKlawisz.textContent += e.key;
+            
+
+        })
+
+
+
+        // let btn = document.querySelector('button');
+
+        // let zmienTlo = function()
+        // {
+        //     document.body.classList.toggle('tlo'); //toggle znaczy to ze gdy klikniemy to tlo albo sie usunie albo z powrotem doda
+        // };
+
+        // //przypisujemy zdarzenie klikniecie mysza do przycisku
+        // btn.addEventListener('click', zmienTlo);
+
+
+
+    </script>
+
+
+</body>
+</html>

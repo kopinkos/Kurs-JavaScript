@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcje</title>
+</head>
+<body>
+    <script>
+        //tworzenie funkcji:
+            //sposob I:
+            function suma(l1, l2)
+            {
+                //cialo funkcji
+                document.write(l1 + l2);
+                document.write('<br>')
+            }
+            suma(12, 43); //wywolanie funckji
+            suma (1, 2); //powinno sie wyswietlic 3
+            //sposob II
+            let odejmowanie = function(l1, l2)
+            {
+                //cialo fucnkji
+                let wynik = l1 - l2;
+                return wynik;
+                // po slowie return kod sie nie wykona 
+                document.write('<br>');
+            }
+            document.write(odejmowanie(100, 50));
+            let a = odejmowanie(5 - 10);
+            document.write(a);
+            //sposob III
+            let mnozenie = (l1, l2) => 
+            {
+                return l1 * l2;
+            }
+            console.log(mnozenie(2, 3));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

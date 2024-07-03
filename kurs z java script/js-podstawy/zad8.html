@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model DOM w js</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            color: white;
+        }
+        .div1 {
+            background-color: green;
+        }
+        .div2{
+            background-color:  blue;
+        }
+    </style>    
+
+</head>
+<body>
+    <h1 class="naglowek">przykladowy naglowek</h1>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <script>
+        //pobieramy elementy strony www
+        let obiektH1 = document.querySelector('h1');
+        let obiektDiv1 = document.querySelector('div.div1');
+        let obiektDiv2 = document.querySelector('div.div2');
+
+        //dodajemy do div1 jakąs zawartosc
+        obiektDiv1.textContent = 'nowa tresc div1';
+
+        //zmieniamy kolor czcionki
+        obiektH1.style.color = 'red';
+
+        //usunmy div2
+        obiektDiv2.remove();
+
+        //dadajmy div3  do strony
+        let obiektDiv3 = document.createElement('div'); // najpierw tworzymy 
+        document.body.appendChild(obiektDiv3); // potem dodajmy do body
+
+        //do nowo utworzonego diva dodajemy klase od nazwie 'nowy'
+        obiektDiv3.classList.add('nowy');
+        
+        //dodajemy do diva jakis tekst
+        obiektDiv3.textContent = 'lorem ipsum';
+
+
+    </script>
+</body>
+</html>
